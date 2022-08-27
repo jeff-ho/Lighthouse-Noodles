@@ -6,5 +6,7 @@ CREATE TABLE items (
   price INTEGER,
   description TEXT,
   img_url VARCHAR(255),
-  category_id INTEGER REFERENCES categories(id)
+  category_id INTEGER
 );
+
+
