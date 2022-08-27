@@ -10,9 +10,4 @@ CREATE TABLE items (
 
 );
 
-SELECT items.name as name, users.name as username
-FROM users
-JOIN orders ON user_id = users.id
-JOIN items ON item_id = items.id
-GROUP BY items.name, users.name
-LIMIT 2;
+
