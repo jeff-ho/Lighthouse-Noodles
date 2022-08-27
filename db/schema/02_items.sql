@@ -7,7 +7,6 @@ CREATE TABLE items (
   description TEXT,
   img_url VARCHAR(255),
   category_id INTEGER
-
 );
 
 
