@@ -4,8 +4,7 @@ CREATE TABLE items (
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(255),
   price INTEGER,
-  description VARCHAR(255),
+  description TEXT,
   img_url VARCHAR(255),
-  category_id INTEGER REFERENCES categories(id),
-  restaurant_id INTEGER REFERENCES restaurant(id)
+  category_id INTEGER REFERENCES categories(id)
 );
