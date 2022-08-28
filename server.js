@@ -33,6 +33,8 @@ const loginRoutes = require('./routes/login');
 const menuRoutes = require('./routes/menu');
 const registerRoutes = require('./routes/register');
 const orderNowRoutes = require('./routes/order_now');
+const checkoutRoutes = require('./routes/checkout');
+
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -41,6 +43,7 @@ app.use('/menu', menuRoutes);
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
 app.use('/order', orderNowRoutes);
+app.use('/checkout', checkoutRoutes);
 
 // Note: mount other resources here, using the same pattern above
 
