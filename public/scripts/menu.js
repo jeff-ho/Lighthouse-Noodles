@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+
+
   const appetizers = function() {
     $.ajax({
       method: 'GET',
@@ -30,11 +32,21 @@ $(document).ready(function () {
       $noodleList.empty();
 
       for(const noodle of response.items) {
-        $(`<img src=${noodle.img_url} class="item-image">`).appendTo($noodleList);
-        $(`<i class="fa-solid fa-cart-plus"></i>`).appendTo($noodleList);
-        $(`<h4 class="noodle-name">`).text(noodle.name).appendTo($noodleList);
-        //$(`<p class="noodle-description">`).text(noodle.description).appendTo($noodleList);
-        $(`<p class="noodle-price">`).text(`Item Price: $${(noodle.price)/100}`).appendTo($noodleList);
+        $(
+          `
+          <div class="item">
+          <img src=${noodle.img_url} class="item-image"">
+          <i class="fa-solid fa-cart-plus"></i>
+          <h4>${noodle.name}</h4>
+          <p>Item Price: $${(noodle.price)/100}</p>
+          </div>
+          `
+        ).appendTo($noodleList);
+        // $(`<img src=${noodle.img_url} class="item-image">`).appendTo($noodleList);
+        // $(`<i class="fa-solid fa-cart-plus"></i>`).appendTo($noodleList);
+        // $(`<h4 class="noodle-name">`).text(noodle.name).appendTo($noodleList);
+        // //$(`<p class="noodle-description">`).text(noodle.description).appendTo($noodleList);
+        // $(`<p class="noodle-price">`).text(`Item Price: $${(noodle.price)/100}`).appendTo($noodleList);
       }
     });
   }
