@@ -14,16 +14,22 @@
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <script src="/vendor/jquery-3.0.0.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="     crossorigin="anonymous" referrerpolicy="no-referrer" />      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <title>Document</title>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Logo here</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex flex-row" >
+   <div class="logo-name">
+    <a class="navbar-brand" href="/">
+      <i class="fa-solid fa-bowl-food"></i>
+    </a>
+    <p>Lighthouse Noodles</p>
+   </div>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    </button> -->
+    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="/menu">Menu</a>
@@ -33,8 +39,6 @@
       </div>
     </div>
   </nav>
-
-
 
 
 <script
