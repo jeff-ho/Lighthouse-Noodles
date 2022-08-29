@@ -5,7 +5,6 @@ require('dotenv').config();
 const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
 const morgan = require('morgan');
-const bodyParser = require("body-parser");
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -34,7 +33,8 @@ const menuRoutes = require('./routes/menu');
 const registerRoutes = require('./routes/register');
 const orderNowRoutes = require('./routes/order_now');
 const checkoutRoutes = require('./routes/checkout');
-const menuApiRoutes = require('./routes/menu-api');
+const appApiRoutes = require('./routes/appetizer-api')
+const mainApiRoutes = require('./routes/main-api')
 
 
 // Mount all resource routes
@@ -44,7 +44,8 @@ app.use('/menu', menuRoutes);
 app.use('/register', registerRoutes);
 app.use('/order', orderNowRoutes);
 app.use('/checkout', checkoutRoutes);
-app.use('/api/menu', menuApiRoutes);
+app.use('/api/menu/app', appApiRoutes)
+app.use('/api/menu/main', mainApiRoutes);
 
 // Note: mount other resources here, using the same pattern above
 
@@ -55,6 +56,8 @@ app.use('/api/menu', menuApiRoutes);
 app.get('/', (req, res) => {
   res.render('homepage');
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);

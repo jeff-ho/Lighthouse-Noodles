@@ -3,7 +3,7 @@ const router  = express.Router();
 const itemQueries = require('../db/queries/items');
 
 router.get('/', (req, res) => {
-  itemQueries.getItems()
+  itemQueries.getItemsByAppetizer()
     .then(items => {
       res.json({ items });
     })
@@ -13,5 +13,6 @@ router.get('/', (req, res) => {
         .json({ error: err.message });
     });
 });
+
 
 module.exports = router;
