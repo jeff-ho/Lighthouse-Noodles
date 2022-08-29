@@ -18,4 +18,22 @@ const getItemsByMain= () => {
     });
 };
 
-module.exports = { getItemsByAppetizer, getItemsByMain };
+const getItemsBySnack= () => {
+  return db.query(
+    'SELECT items.name, items.description, items.price, items.img_url FROM items JOIN categories ON category_id = categories.id WHERE categories.id = 3;'
+  )
+    .then(data => {
+      return data.rows;
+    });
+};
+
+const getItemsByDrink= () => {
+  return db.query(
+    'SELECT items.name, items.description, items.price, items.img_url FROM items JOIN categories ON category_id = categories.id WHERE categories.id = 4;'
+  )
+    .then(data => {
+      return data.rows;
+    });
+};
+
+module.exports = { getItemsByAppetizer, getItemsByMain, getItemsBySnack, getItemsByDrink };

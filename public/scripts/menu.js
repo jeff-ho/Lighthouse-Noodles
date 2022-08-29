@@ -23,7 +23,7 @@ $(document).ready(function () {
   const noodles = function() {
     $.ajax({
       method: 'GET',
-      url: '/api/menu/main'
+      url: '/api/menu/noodle'
     })
     .done((response) => {
       const $noodleList = $('#noodle-container');
@@ -36,10 +36,50 @@ $(document).ready(function () {
         $(`<p class="noodle-price">`).text(`Item Price: $${(noodle.price)/100}`).appendTo($noodleList);
 
       }
-    console.log(response.items)
     });
   }
   noodles();
+
+  const snacks = function() {
+    $.ajax({
+      method: 'GET',
+      url: '/api/menu/snack'
+    })
+    .done((response) => {
+      const $snackList = $('#snack-container');
+      $snackList.empty();
+
+      for(const snack of response.items) {
+        $(`<h4 class="snack-name">`).text(snack.name).appendTo($snackList);
+        $(`<p class="snack-description">`).text(snack.description).appendTo($snackList);
+        $(`<img src=${snack.img_url} class="item-image">`).appendTo($snackList);
+        $(`<p class="snack-price">`).text(`Item Price: $${(snack.price)/100}`).appendTo($snackList);
+
+      }
+    });
+  }
+  snacks();
+
+  const drinks = function() {
+    $.ajax({
+      method: 'GET',
+      url: '/api/menu/drink'
+    })
+    .done((response) => {
+      const $drinkList = $('#drink-container');
+      $drinkList.empty();
+
+      for(const drink of response.items) {
+        $(`<h4 class="drink-name">`).text(drink.name).appendTo($drinkList);
+        $(`<p class="drink-description">`).text(drink.description).appendTo($drinkList);
+        $(`<img src=${drink.img_url} class="item-image">`).appendTo($drinkList);
+        $(`<p class="drink-price">`).text(`Item Price: $${(drink.price)/100}`).appendTo($drinkList);
+
+      }
+    console.log(response.items)
+    });
+  }
+  drinks();
 
 })
 
