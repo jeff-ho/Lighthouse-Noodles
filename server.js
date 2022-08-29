@@ -34,12 +34,8 @@ const menuRoutes = require('./routes/menu');
 const registerRoutes = require('./routes/register');
 const orderNowRoutes = require('./routes/order_now');
 const checkoutRoutes = require('./routes/checkout');
-<<<<<<< HEAD
-const usersRoutes = require('./routes/users');
-=======
 const menuApiRoutes = require('./routes/menu-api');
 
->>>>>>> 505518fa5667ab8ce1dcd011d8378208598b33f0
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -48,12 +44,8 @@ app.use('/menu', menuRoutes);
 app.use('/register', registerRoutes);
 app.use('/order', orderNowRoutes);
 app.use('/checkout', checkoutRoutes);
-<<<<<<< HEAD
-app.use('/users', usersRoutes);
-=======
 app.use('/api/menu', menuApiRoutes);
 
->>>>>>> 505518fa5667ab8ce1dcd011d8378208598b33f0
 // Note: mount other resources here, using the same pattern above
 
 // Home page
