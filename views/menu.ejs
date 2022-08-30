@@ -22,11 +22,12 @@
 </head>
 <body>
 
-  <div>
-    <img src="..." class="img-fluid" alt="Responsive image">
+  <div class="header-menu">
+    <img src="../images/menu-header.jpg" class="img-fluid" alt="...">
   </div>
 
-  <nav id="navbar-example2" class="navbar navbar-light bg-light">
+  <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+
     <ul class="nav nav-pills">
       <li class="nav-item">
         <a class="nav-link" href="#apps">Appetizers</a>
@@ -43,49 +44,27 @@
 
     </ul>
   </nav>
-  <div class="main-menu">
-  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-    <h4 id="apps">Appetizers</h4>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="appetizer-container"></div>
-    <h4 id="noods">House Special Noodle Soup</h4>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="noodle-container"></div>
-    <h4 id="snacks">Snacks</h4>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="snack-container"></div>
-    <h4 id="drinks">Drinks</h4>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="drink-container"></div>
+  <div id="item-container"data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2 d-flex flex-column" tabindex="0">
+    <div class="d-flex flex-column">
+      <h4 id="apps" class="text-center">Appetizers</h4>
+      <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="appetizer-container"></div>
+    </div>
+  <div class="d-flex flex-column">
+    <h4 id="noods" class="text-center">House Special Noodle Soup</h4>
+    <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="noodle-container"></div>
   </div>
-</div>
-
-  <!-- need to import the header  -->
-<!-- <p>insert header here </p> -->
-
-<!-- !-- need to align row  -->
-<!-- <div id="listExample" class="list-group" >
-  <a class="list-group-item list-group-item-action" href="#apps">Appetizers</a>
-  <a class="list-group-item list-group-item-action" href="#noods">House Special Noodle Soup</a>
-  <a class="list-group-item list-group-item-action" href="#snacks">Snacks</a>
-  <a class="list-group-item list-group-item-action" href="#drinks">Drinks</a>
-</div> -->
-
-<!-- need to put the specific category items into each section -->
-<!-- need to figure out position relative styling  -->
-
-<!-- <article id="menuItemsList">
-  Menu Items
-</article>
-
-<div class="main-menu">
-  <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-    <h1 id="apps">Appetizers</h1>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="appetizer-container"></div>
-    <h4 id="noods">House Special Noodle Soup</h4>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="noodle-container"></div>
-    <h4 id="snacks">Snacks</h4>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="snack-container"></div>
-    <h4 id="drinks">Drinks</h4>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="drink-container"></div>
+  <div class="d-flex flex-column">
+    <h4 id="snacks" class="text-center">Snacks</h4>
+    <div  class="d-flex flex-sm-row flex-wrap justify-content-center" id="snack-container"></div>
   </div>
-</div> -->
+  <div class="d-flex flex-column">
+    <h4 id="drinks" class="text-center">Drinks</h4>
+    <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="drink-container"></div>
+  </div>
+  </div>
+
+
+
 
 
 <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->

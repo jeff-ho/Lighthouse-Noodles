@@ -13,23 +13,58 @@ listExample{
   position: relative;
 }
 
-img {
+
+.item img {
   max-width: 10rem;
   max-height: 10rem;
+  padding-bottom:20px;
 }
 
 
 .item {
- background: hsl(178, 79%, 93%);
+ width: 270px;
+ height: 400px;
+ background: #BFBFBF;
  display:flex;
  justify-content:center;
  align-items:center;
  flex-direction: column;
- padding:3em;
+ padding:2em;
+ margin-bottom: 20px;
+ margin-left: 5px;
+ margin-right: 5px;
+ color: #10403B;
 
 }
+.btn {
+  background-color: #4C5958;
+  color: azure;
+}
 
-#appetizer-container {
-  justify-content: flex-start;
+// #appetizer-container {
+//   justify-content: flex-start;
 
+// }
+
+.header-menu img {
+  background-size: cover;
+}
+#items-container {
+  margin: 0 2px;
+
+}
+#apps {
+margin-bottom: 4em;
+}
+#noods {
+margin-bottom: 4em;
+margin-top: 2em;
+}
+#snacks {
+margin-bottom: 4em;
+margin-top: 2em;
+}
+#drinks {
+margin-bottom: 4em;
+margin-top: 2em;
 }
