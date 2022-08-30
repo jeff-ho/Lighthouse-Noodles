@@ -6,8 +6,10 @@ const extractId = function (click) {
   $.ajax({
     method: 'POST',
     url: '/api/menu/cart',
-    //data:{item_id:click, item_quantity:1}
+    data: {click} // added -<<<<<< this
+      
   })
+  console.log(click, 'testing ')
   .done((response) => {
     // const $cartList = $('<div></div>');
     // $usersList.empty();
@@ -35,7 +37,7 @@ $(document).ready(function () {
           <img src=${appetizer.img_url} class="item-image">
           <h4>${appetizer.name}</h4>
           <p>Item Price: $${(appetizer.price)/100} <i id="${appetizer.id}" onClick="extractId(this.id)"  class="fa-solid fa-cart-plus"></i></p>
-          
+
           </div>
           `
         ).appendTo($appetizerList);
