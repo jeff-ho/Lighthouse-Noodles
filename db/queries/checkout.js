@@ -10,4 +10,19 @@ const addToCheckout = (item) => {
     });
 };
 
-module.exports = { addToCheckout };
+
+const addOneToItem = (itemId) => {
+
+  console.log('addOneToItem', 'function being called');
+  console.log(itemId,'current checkasdasdasdasdasdas');
+  return db.query(
+    'UPDATE carts SET item_quantity = item_quantity + 1 WHERE id = $1;', [itemId])
+    .then(data => {
+      //console.log(data.rows)
+      return data.rows[0];
+    });
+}
+
+module.exports = { addToCheckout, addOneToItem };
+
+//UPDATE carts SET item_quantity = item_quantity + 1 WHERE id = 1;

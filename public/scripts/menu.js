@@ -1,14 +1,15 @@
 
 //const addToOrder = require('../../db/queries/cart')
 let cartIDvalidate = [];
-const extractId = function (click) {
 
+const extractId = function (click) {
+  //console.log('test click me');
   if(cartIDvalidate.includes(click)){
-    console.log('my item was already here')
+    //console.log('my item was already here')
 
     $.ajax({
       method: 'POST',
-      url: '/api/quantity',
+      url: '/api/addOne',
       data: {click} // added -<<<<<< this
     })
     .done((response) => {

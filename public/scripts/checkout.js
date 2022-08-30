@@ -1,11 +1,5 @@
 
 const changeQuantity = function (cart_id, quant) {
-
-
-
-
-
-
   $.ajax({
     method: 'POST',
     url: '/api/quantity',
@@ -38,7 +32,7 @@ $(document).ready(function () {
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
             </select> */}
-           // onClick="extractId(this.id)"
+           // ="extractId(this.id)"
       for (const checkout of response.items) {
 
 
