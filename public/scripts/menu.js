@@ -1,17 +1,44 @@
 
 //const addToOrder = require('../../db/queries/cart')
-
+let cartIDvalidate = [];
 const extractId = function (click) {
-  $.ajax({
-    method: 'POST',
-    url: '/api/menu/cart',
-    data: {click} // added -<<<<<< this
-  })
-  .done((response) => {
-    // const $cartList = $('<div></div>');
-    // $usersList.empty();
-    console.log("Added to cart")
-  });
+
+  if(cartIDvalidate.includes(click)){
+    console.log('my item was already here')
+
+    $.ajax({
+      method: 'POST',
+      url: '/api/quantity',
+      data: {click} // added -<<<<<< this
+    })
+    .done((response) => {
+      // const $cartList = $('<div></div>');
+      // $usersList.empty();
+      console.log("Added to cart")
+    });
+
+
+
+  }else {
+    console.log('it aint here, added')
+
+    $.ajax({
+      method: 'POST',
+      url: '/api/menu/cart',
+      data: {click} // added -<<<<<< this
+    })
+    .done((response) => {
+      // const $cartList = $('<div></div>');
+      // $usersList.empty();
+      console.log("Added to cart")
+    });
+
+    cartIDvalidate.push(click)
+  }
+
+
+
+
 };
 
 $(document).ready(function () {
@@ -114,7 +141,7 @@ $(document).ready(function () {
           `
         ).appendTo($drinkList);
       }
-  
+
     });
   }
   drinks();
