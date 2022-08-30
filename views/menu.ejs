@@ -22,21 +22,55 @@
 </head>
 <body>
 
+  <div>
+    <img src="..." class="img-fluid" alt="Responsive image">
+  </div>
+
+  <nav id="navbar-example2" class="navbar navbar-light bg-light">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#apps">Appetizers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#noods">Noodle Soup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#snacks">Snacks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#drinks">Drinks</a>
+      </li>
+
+    </ul>
+  </nav>
+  <div class="main-menu">
+  <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+    <h4 id="apps">Appetizers</h4>
+    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="appetizer-container"></div>
+    <h4 id="noods">House Special Noodle Soup</h4>
+    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="noodle-container"></div>
+    <h4 id="snacks">Snacks</h4>
+    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="snack-container"></div>
+    <h4 id="drinks">Drinks</h4>
+    <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="drink-container"></div>
+  </div>
+</div>
+
   <!-- need to import the header  -->
-<p>insert header here </p>
+<!-- <p>insert header here </p> -->
 
 <!-- !-- need to align row  -->
-<div id="listExample" class="list-group" >
+<!-- <div id="listExample" class="list-group" >
   <a class="list-group-item list-group-item-action" href="#apps">Appetizers</a>
   <a class="list-group-item list-group-item-action" href="#noods">House Special Noodle Soup</a>
   <a class="list-group-item list-group-item-action" href="#snacks">Snacks</a>
   <a class="list-group-item list-group-item-action" href="#drinks">Drinks</a>
-</div>
+</div> -->
 
 <!-- need to put the specific category items into each section -->
 <!-- need to figure out position relative styling  -->
 
-<article id="menuItemsList">
+<!-- <article id="menuItemsList">
   Menu Items
 </article>
 
@@ -51,7 +85,7 @@
     <h4 id="drinks">Drinks</h4>
     <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="drink-container"></div>
   </div>
-</div>
+</div> -->
 
 
 <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
