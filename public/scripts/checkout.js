@@ -20,7 +20,7 @@ $(document).ready(function () {
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
             </select> */}
-
+           // onClick="extractId(this.id)"
       for (const checkout of response.items) {
         $(
           `
@@ -31,7 +31,7 @@ $(document).ready(function () {
                 <span>${checkout.name}</span>
 
                 <span>
-                <select name="quantity" id="adjustItemQuantity">
+                <select name="quantity" id="adjustItemQuantity" onChange="console.log(this.value)">
                         <option selected="selected" value="${checkout.quantity}">${checkout.quantity}</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
