@@ -37,6 +37,7 @@ const appApiRoutes = require('./routes/appetizer-api');
 const noodleApiRoutes = require('./routes/noodle-api');
 const snackApiRoutes = require('./routes/snack-api');
 const drinkApiRoutes = require('./routes/drink-api');
+const cartApiRoutes = require('./routes/cart-api');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -49,6 +50,7 @@ app.use('/api/menu/app', appApiRoutes);
 app.use('/api/menu/noodle', noodleApiRoutes);
 app.use('/api/menu/snack', snackApiRoutes);
 app.use('/api/menu/drink', drinkApiRoutes);
+app.use('/api/menu/cart', cartApiRoutes);
 
 // Note: mount other resources here, using the same pattern above
 
