@@ -2,10 +2,9 @@ const db = require('../connection');
 
 const addToCheckout = (item) => {
   return db.query(
-    'SELECT user_id, item_id, SUM(item_quantity) as quantity, items.price FROM carts JOIN items ON item_id = items.id GROUP BY user_id, item_id, items.price;')
+    'SELECT items.img_url as img, user_id, users.name, item_id, items.name as name, SUM(item_quantity) as quantity, items.price FROM carts JOIN items ON item_id = items.id JOIN users ON user_id = users.id GROUP BY user_id, item_id, items.price, img, items.name, users.name ORDER BY item_id;')
     .then(data => {
-      console.log(data.rows)
-      return data.rows[0];
+      return data.rows;
     });
 };
 
