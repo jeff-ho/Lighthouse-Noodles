@@ -9,6 +9,16 @@ const addToOrder = (item) => {
     });
 };
 
+const updateQuantity = (id) => {
+  return db.query(
+    'UPDATE carts SET item_quantity = item_quantity + 1 WHERE id = $1;', [id])
+    .then(data => {
+      //console.log(data.rows)
+      return data.rows[0];
+    });
+};
+
+
 
 module.exports = { addToOrder }
 
