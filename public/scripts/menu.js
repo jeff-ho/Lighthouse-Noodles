@@ -7,17 +7,13 @@ const extractId = function (click) {
     method: 'POST',
     url: '/api/menu/cart',
     data: {click} // added -<<<<<< this
-      
   })
-  console.log(click, 'testing ')
   .done((response) => {
     // const $cartList = $('<div></div>');
     // $usersList.empty();
     console.log(response,'fdsafadsfdsfdsafdsafdsa')
   });
 };
-
-
 
 $(document).ready(function () {
 

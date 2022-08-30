@@ -7,11 +7,12 @@ router.post('/', (req, res,) => {
   console.log('current test', req.body)
   const myIDNumber = req.body.click
   console.log(myIDNumber, 'checking')
+  console.log(req.body,'fdsfadsfdsfsadfsda')
 
   itemQueries.addToOrder(myIDNumber)
-  
+
     .then(items => {
-     console.log(items, "this is my items")
+     console.log("ITEM ADDED TO CART")
     })
     .catch(err => {
       res
