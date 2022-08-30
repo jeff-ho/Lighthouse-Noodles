@@ -35,7 +35,7 @@ $(document).ready(function () {
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
             </select> */}
-
+           // onClick="extractId(this.id)"
       for (const checkout of response.items) {
         $(
           `
