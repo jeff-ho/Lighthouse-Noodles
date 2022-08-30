@@ -7,10 +7,6 @@ const extractId = function (click) {
     method: 'POST',
     url: '/api/menu/cart',
     data: {click} // added -<<<<<< this
-<<<<<<< HEAD
-
-=======
->>>>>>> cefdfd24bfafe0285721b7f1333738190ce19e34
   })
   .done((response) => {
     // const $cartList = $('<div></div>');
