@@ -114,7 +114,7 @@ $(document).ready(function () {
           `
         ).appendTo($drinkList);
       }
-    console.log(response.items)
+  
     });
   }
   drinks();

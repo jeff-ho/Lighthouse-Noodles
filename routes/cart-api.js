@@ -7,7 +7,7 @@ router.post('/', (req, res,) => {
   console.log('current test', req.body)
   const myIDNumber = req.body.click
   console.log(myIDNumber, 'checking')
-  console.log(req.body,'fdsfadsfdsfsadfsda')
+  
 
   itemQueries.addToOrder(myIDNumber)
 

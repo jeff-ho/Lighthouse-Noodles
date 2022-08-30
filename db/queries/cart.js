@@ -9,9 +9,9 @@ const addToOrder = (item) => {
     });
 };
 
-const updateQuantity = (id) => {
+const updateQuantity = (cartId, quantity) => {
   return db.query(
-    'UPDATE carts SET item_quantity = item_quantity + 1 WHERE id = $1;', [id])
+    'UPDATE carts SET item_quantity = $2 WHERE id = $1;', [cartId, quantity])
     .then(data => {
       //console.log(data.rows)
       return data.rows[0];
@@ -19,6 +19,5 @@ const updateQuantity = (id) => {
 };
 
 
-
-module.exports = { addToOrder }
+module.exports = { addToOrder, updateQuantity }
 

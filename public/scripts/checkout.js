@@ -1,15 +1,27 @@
+
+const changeQuantity = function (cart_id, quant) {
+  $.ajax({
+    method: 'POST',
+    url: '/api/quantity',
+    data: {cart_id, quant} // added -<<<<<< this
+  })
+  .done((response) => {
+    // const $cartList = $('<div></div>');
+    // $usersList.empty();
+    console.log("Quantity changed")
+  });
+};
+
+
 $(document).ready(function () {
   const renderCheckout = function () {
     $.ajax({
       method: "GET",
       url: "/api/checkout",
     }).done((response) => {
-      console.log(response, "response");
       const $checkoutList = $(".items-checkout");
       $checkoutList.empty();
       let sum = 0;
-      let userName = response.items[0];
-      console.log(userName);
 
 {/* <select name="pets" id="pet-select">
                 <option value="">--Please choose an option--</option>
@@ -20,8 +32,10 @@ $(document).ready(function () {
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
             </select> */}
-
+           // onClick="extractId(this.id)"
       for (const checkout of response.items) {
+        
+
         $(
           `
           <div id="cartCategories">
@@ -31,7 +45,7 @@ $(document).ready(function () {
                 <span>${checkout.name}</span>
 
                 <span>
-                <select name="quantity" id="adjustItemQuantity">
+                <select name="quantity" id="adjustItemQuantity" onChange="changeQuantity(${checkout.cart_id}, this.value)">
                         <option selected="selected" value="${checkout.quantity}">${checkout.quantity}</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
