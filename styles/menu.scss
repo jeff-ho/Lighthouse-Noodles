@@ -2,7 +2,8 @@
 
 body{
   background: hsl(178, 79%, 93%);
-  flex:display;
+
+
 
 }
 
@@ -13,6 +14,22 @@ listExample{
 }
 
 img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 10rem;
+  max-height: 10rem;
+}
+
+
+.item {
+ background: hsl(178, 79%, 93%);
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ flex-direction: column;
+ padding:3em;
+
+}
+
+#appetizer-container {
+  justify-content: flex-start;
+
 }
