@@ -7,7 +7,7 @@ const extractId = function (click) {
     method: 'POST',
     url: '/api/menu/cart',
     data: {click} // added -<<<<<< this
-      
+
   })
   console.log(click, 'testing ')
   .done((response) => {
