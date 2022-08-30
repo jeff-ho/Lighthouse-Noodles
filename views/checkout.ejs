@@ -12,27 +12,19 @@
   <link rel="stylesheet" href="/vendor/border-box.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
-
+  <script defer src="/scripts/checkout.js"></script>
   <script src="/vendor/jquery-3.0.0.js"></script>
 
 </head>
 
 <body>
-  <h1>Checkout</h1>
+  <div class="main-checkout">
 
-  <div class="main-menu">
-    <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-      <h1 id="apps">Appetizers</h1>
-      <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="appetizer-container"></div>
-      <h4 id="noods">House Special Noodle Soup</h4>
-      <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="noodle-container"></div>
-      <h4 id="snacks">Snacks</h4>
-      <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="snack-container"></div>
-      <h4 id="drinks">Drinks</h4>
-      <div class="d-flex flex-sm-row flex-wrap justify-content-around" id="drink-container"></div>
-    </div>
+    <h1>YOUR ITEMS</h1>
+    <div class="items-checkout"></div>
+    <p id="subtotal">Subtotal</p>
+
   </div>
-
 
 </body>
 </html>

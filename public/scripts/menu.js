@@ -2,7 +2,6 @@
 //const addToOrder = require('../../db/queries/cart')
 
 const extractId = function (click) {
-  console.log('here', click)
   $.ajax({
     method: 'POST',
     url: '/api/menu/cart',
@@ -11,7 +10,7 @@ const extractId = function (click) {
   .done((response) => {
     // const $cartList = $('<div></div>');
     // $usersList.empty();
-    console.log(response,'fdsafadsfdsfdsafdsafdsa')
+    console.log("Added to cart")
   });
 };
 
