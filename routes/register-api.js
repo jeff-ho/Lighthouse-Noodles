@@ -8,13 +8,13 @@ router.post("/", (req, res) => {
   let userName = req.body.name;
   let phone = req.body.phone;
 
+  let session = req.session;
+  session.name = userName;
+  session.phone = phone;
+
   itemQueries
     .addUser(email, userName, phone)
     .then((items) => {
-      let session = req.session;
-      session.name = userName;
-      session.phone = phone;
-      console.log(req.session.name, req.session.phone, "fdsafdsfsd");
       res.redirect("/");
     })
     .catch((err) => {
