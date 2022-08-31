@@ -1,4 +1,3 @@
-
 const changeQuantity = function (cart_id, quant) {
   $.ajax({
     method: 'POST',
@@ -22,9 +21,6 @@ const sendText = function (total) {
       console.log("Added to cart")
     });
 }
-
-
-
 
 
 const submitOrder = function (total) {
@@ -81,13 +77,14 @@ $(document).ready(function () {
               </span>
           </div>`
         ).appendTo($checkoutList);
-
+        let name = checkout.user_name
         sum += checkout.price;
       }
       let taxes = (sum / 100) * 0.13;
       let subtotal = sum / 100;
       let total = (subtotal + taxes).toFixed(2);
-      let name = response.items[0].user_name
+      //let name = response.items[0].user_name
+
       $(`
       <span>Back to menu button</span>
       <span>

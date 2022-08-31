@@ -1,5 +1,3 @@
-
-
 $("#submit-button").on('click', function() {
   $.ajax({
     method: 'POST',
