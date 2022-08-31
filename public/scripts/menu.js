@@ -1,47 +1,15 @@
-
-//const addToOrder = require('../../db/queries/cart')
-
-
 const extractId = function (click) {
-  let cartIDvalidate = [];
-  //console.log('test click me');
-  if(cartIDvalidate.includes(click)){
-    //console.log('my item was already here')
+  $.ajax({
+    method: 'POST',
+    url: '/api/menu/cart',
+    data: {click} // added -<<<<<< this
+  })
+  .done((response) => {
 
-    $.ajax({
-      method: 'POST',
-      url: '/api/addOne',
-      data: {click} // added -<<<<<< this
-    })
-    .done((response) => {
-      // const $cartList = $('<div></div>');
-      // $usersList.empty();
-      console.log("Added to cart")
-    });
-
-
-
-  }else {
-    console.log('it aint here, added')
-
-    $.ajax({
-      method: 'POST',
-      url: '/api/menu/cart',
-      data: {click} // added -<<<<<< this
-    })
-    .done((response) => {
-      // const $cartList = $('<div></div>');
-      // $usersList.empty();
-      console.log("Added to cart")
-    });
-
-    cartIDvalidate.push(click)
+    console.log("Added to cart")
+  });
   }
 
-
-
-
-};
 
 $(document).ready(function () {
 

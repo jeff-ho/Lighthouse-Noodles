@@ -3,6 +3,6 @@ DROP TABLE IF EXISTS carts CASCADE;
 CREATE TABLE carts (
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INTEGER,
-  item_id INTEGER,
+  item_id INTEGER UNIQUE,
   item_quantity INTEGER
 );
