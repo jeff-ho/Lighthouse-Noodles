@@ -61,7 +61,9 @@ const renderCheckout = function () {
       $(
         `
         <div id="cartCategories">
+
               <img src="${checkout.img}"  width="75" height="75">
+
               <span>${checkout.name}</span>
               <span>
               <select name="quantity" id="adjustItemQuantity" onChange="renderAndUpdate(${checkout.cart_id}, this.value)">
@@ -102,11 +104,17 @@ const renderCheckout = function () {
 
       <div><button id="submit-button" onClick="sendText(${total})">Order Now</button></div>
 
-      <div>
-        <div id="checkoutSum">
-          <p>Subtotal: $${sum / 100}</p>
-          <p>Taxes: $${taxes.toFixed(2)}</p>
-          <p>Total: $${total}</p>
+      <div id="checkoutSum">
+        <div >
+          <p>Subtotal: </p>
+          <p>Taxes: </p>
+          <p class="totalFSize">Total: </p>
+        </div>
+
+        <div id="totalPrices">
+          <p>$${sum / 100}</p>
+          <p>$${taxes.toFixed(2)}</p>
+          <p class="totalFSize">$${total}</p>
         </div>
       </div>
 
