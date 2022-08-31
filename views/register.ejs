@@ -23,12 +23,14 @@
 </head>
 <body>
   <%- include('partials/_header') %>
-  <form action="/register" method="POST" style="padding-left: 20px; padding-top: 5px">
+  <form action="/api/register" method="POST" style="padding-left: 20px; padding-top: 5px">
     <h1>Registration</h1>
-    <h5>Username:</h5>
+    <h5>Email:</h5>
     <p><input type="email" name="email" /> </p>
-    <h5>Password:</h5>
-    <p> <input type="password" name="pass" /> </p>
+    <h5>Name:</h5>
+    <p> <input type="text" name="name" /> </p>
+    <h5>Phone Number:</h5>
+    <p><input type="tel" name="phone" /> </p>
     <p><button class="btn btn-primary">Register</button></p>
   </form>
 
