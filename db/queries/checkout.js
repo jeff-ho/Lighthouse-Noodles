@@ -13,16 +13,23 @@ const addToCheckout = (item) => {
 
 const addOneToItem = (itemId) => {
 
-  console.log('addOneToItem', 'function being called');
-  console.log(itemId,'current checkasdasdasdasdasdas');
   return db.query(
     'UPDATE carts SET item_quantity = item_quantity + 1 WHERE id = $1;', [itemId])
     .then(data => {
       //console.log(data.rows)
       return data.rows[0];
     });
-}
+};
 
-module.exports = { addToCheckout, addOneToItem };
+const deleteOneItem = (itemId) => {
+  return db.query(
+    'DELETE FROM carts WHERE id = $1;', [itemId])
+    .then(data => {
+      return data.rows[0];
+    });
+};
+
+
+module.exports = { addToCheckout, addOneToItem, deleteOneItem };
 
 
