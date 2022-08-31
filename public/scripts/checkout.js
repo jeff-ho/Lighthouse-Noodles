@@ -13,6 +13,19 @@ const changeQuantity = function (cart_id, quant) {
 };
 
 
+const submitOrder = function (cart_id, quant) {
+  $.ajax({
+    method: 'POST',
+    url: '/api/order',
+    data: {cart_id, quant} // added -<<<<<< this
+  })
+  .done((response) => {
+    // const $cartList = $('<div></div>');
+    // $usersList.empty();
+    console.log("Submitted")
+  });
+};
+
 $(document).ready(function () {
   const renderCheckout = function () {
     $.ajax({
@@ -23,27 +36,15 @@ $(document).ready(function () {
       $checkoutList.empty();
       let sum = 0;
 
-{/* <select name="pets" id="pet-select">
-                <option value="">--Please choose an option--</option>
-                <option value="dog">Dog</option>
-                <option value="cat">Cat</option>
-                <option value="hamster">Hamster</option>
-                <option value="parrot">Parrot</option>
-                <option value="spider">Spider</option>
-                <option value="goldfish">Goldfish</option>
-            </select> */}
-           // ="extractId(this.id)"
-      for (const checkout of response.items) {
+      console.log(response.items)
 
+      for (const checkout of response.items) {
 
         $(
           `
           <div id="cartCategories">
-
                 <img src="${checkout.img}"  width="75" height="75">
-
                 <span>${checkout.name}</span>
-
                 <span>
                 <select name="quantity" id="adjustItemQuantity" onChange="changeQuantity(${checkout.cart_id}, this.value)">
                         <option selected="selected" value="${checkout.quantity}">${checkout.quantity}</option>
@@ -57,27 +58,15 @@ $(document).ready(function () {
                         <option value="8">8</option>
                         <option value="9">9</option>
                         <option value="10">10</option>
-
                 </select>
-
-
-
                 </span>
-
                 <span>Price: $${(checkout.price / 100) * checkout.quantity}</span>
                 <span>
                 <input class="btn btn-primary" type="submit" value="delete">
                 </span>
               </span>
-          </div>
-
-
-
-            `
+          </div>`
         ).appendTo($checkoutList);
-
-
-
 
         sum += checkout.price;
       }
@@ -87,17 +76,11 @@ $(document).ready(function () {
       <span>Back to menu button</span>
       <span>
         <div>
-
             Subtotal: $${sum / 100}
             Taxes: $${taxes}
             Total: $${(subtotal + taxes).toFixed(2)}
-
-
         </div>
-
       </span>
-      <input class="btn btn-primary" type="submit" value="CHECKOUT">
-
         `).appendTo(`#subtotal`);
     });
   };
@@ -106,42 +89,3 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-// const renderCheckout = function () {
-//   $.ajax({
-//     method: "GET",
-//     url: "/api/checkout",
-//   }).done((response) => {
-//     console.log(response, "response");
-//     const $checkoutList = $(".items-checkout");
-//     $checkoutList.empty();
-//     let sum = 0;
-//     let userName = response.items[0];
-//     console.log(userName);
-
-//     for (const checkout of response.items) {
-//       $(
-//         `
-//           <div class="item">
-//           <h4>${checkout.name}</h4>
-//           <div><span>Quantity: ${checkout.quantity}</span>
-//           <span>Price: $${(checkout.price / 100) * checkout.quantity}</span>
-//            </div>
-//           </div>
-//           `
-//       ).appendTo($checkoutList);
-//       sum += checkout.price;
-//     }
-//     let taxes = (sum / 100) * 0.13;
-//     let subtotal = sum / 100;
-//     $(`<p>Subtotal: $${sum / 100}</p>
-//       <p>Taxes: $${taxes}</p>
-//       <p>Total: $${(subtotal + taxes).toFixed(2)}</p>`).appendTo(`#subtotal`);
-//   });
-// };

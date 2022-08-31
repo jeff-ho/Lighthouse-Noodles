@@ -25,4 +25,4 @@ const addOneToItem = (itemId) => {
 
 module.exports = { addToCheckout, addOneToItem };
 
-//UPDATE carts SET item_quantity = item_quantity + 1 WHERE id = 1;
+

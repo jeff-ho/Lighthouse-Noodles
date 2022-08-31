@@ -1,8 +1,9 @@
 
 //const addToOrder = require('../../db/queries/cart')
-let cartIDvalidate = [];
+
 
 const extractId = function (click) {
+  let cartIDvalidate = [];
   //console.log('test click me');
   if(cartIDvalidate.includes(click)){
     //console.log('my item was already here')
