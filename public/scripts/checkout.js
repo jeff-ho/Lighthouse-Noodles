@@ -98,15 +98,22 @@ const renderCheckout = function () {
     let total = (subtotal + taxes).toFixed(2);
 
     $(`
-    <span>Back to menu button</span>
-    <span>
+    <div id="bottomCheckoutOutput">
+
+      <div><button id="submit-button" onClick="sendText(${total})">Order Now</button></div>
+
       <div>
-          Subtotal: $${sum / 100}
-          Taxes: $${taxes.toFixed(2)}
-          Total: $${total}
+        <div id="checkoutSum">
+          <p>Subtotal: $${sum / 100}</p>
+          <p>Taxes: $${taxes.toFixed(2)}</p>
+          <p>Total: $${total}</p>
+        </div>
       </div>
-    </span>
-    <button id="submit-button" onClick="sendText(${total})">Order Now</button>
+
+    </div>
+
+
+
       `).appendTo(`#subtotal`);
   });
 };
