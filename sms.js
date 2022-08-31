@@ -14,6 +14,7 @@ const sendTextToUser = function(total) {
   .then(message => console.log(message.sid));
 }
 
+
 // const sendTextToRestaurant = function(total, itemList) {
 //   client.messages
 //   .create({
