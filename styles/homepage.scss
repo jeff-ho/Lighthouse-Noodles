@@ -1,6 +1,61 @@
 .navbarnavbar-expand-lgnavbar-lightbg-light
 {
 display:flex;
-flex-direction:row-reverse
+flex-direction:row-reverse;
+
 }
 
+// body{
+//   width: 100vh;
+//   height: 100vh;
+// }
+
+
+
+// // #homeMain{
+//   html{
+// flex:display;
+// justify-content: center;
+//   // flex-grow:1;
+//   // width: 100%;
+//   // height: 100%;
+
+
+//   // background-image: url("/images/ramen.jpg");
+//   background-image: url("/images/noodleSoup.jpg");
+
+//    background-repeat: no-repeat;
+
+// }
+
+body {
+  background-image: url('/images/noodleSoup.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#titleText {
+  display:flex;
+  //
+  //align-items: center;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
+  // text-align: center;.
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  height: 15%;
+  width: 15%;
+
+
+}
+
+#navbarNav{
+ // background:skyblue;
+ height:120%;
+ font-size:2rem;
+}
