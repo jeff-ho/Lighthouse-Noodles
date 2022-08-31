@@ -4,7 +4,7 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 const randomId = require('./idGenerator');
 
-const sendText = function(total) {
+const sendTextToUser = function(total) {
   client.messages
   .create({
      body: `Hang tight! Your order number is: ${randomId.generateRandomString()}. Your order total is: $${total}. Please give us approximately 20 minutes to prepare your order!  `,
@@ -14,7 +14,17 @@ const sendText = function(total) {
   .then(message => console.log(message.sid));
 }
 
-module.exports = { sendText }
+// const sendTextToRestaurant = function(total, itemList) {
+//   client.messages
+//   .create({
+//      body: `New Order! Order:   Your order total is: $${total}.   `,
+//      from: process.env.OUR_PHONE_NUMBER,
+//      to: process.env.PHONE_NUMBER
+//    })
+//   .then(message => console.log(message.sid));
+// }
+
+module.exports = { sendTextToUser }
 
 
 

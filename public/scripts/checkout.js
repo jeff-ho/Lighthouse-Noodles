@@ -34,6 +34,19 @@ const submitOrder = function (total) {
   });
 };
 
+const deleteItem = function (cart_id) {
+  console.log('made it to delete function')
+  console.log(cart_id,'cart id')
+  $.ajax({
+    method: 'POST',
+    url: '/api/delete',
+    data: {cart_id}
+  })
+  .done((response) => {
+    console.log("Deleted Item")
+  });
+}
+
 const renderCheckout = function () {
   $.ajax({
     method: "GET",
@@ -45,7 +58,6 @@ const renderCheckout = function () {
     let sum = 0;
 
     for (const checkout of response.items) {
-      console.log(checkout.cart_id, checkout.quantity, checkout.price,'checkout')
       $(
         `
         <div id="cartCategories">
@@ -73,7 +85,7 @@ const renderCheckout = function () {
               </span>
               <span>Price: $${(checkout.price / 100) * checkout.quantity}</span>
               <span>
-              <input class="btn btn-primary" type="submit" value="delete">
+              <input class="btn btn-primary" type="submit" value="delete" onClick="deleteAndUpdate(${checkout.cart_id})">
               </span>
             </span>
         </div>`
@@ -108,8 +120,13 @@ const renderCheckout = function () {
 
 const renderAndUpdate = function (cartId, quant) {
   changeQuantity(cartId, quant);
-  renderCheckout()
+  renderCheckout();
 };
+
+const deleteAndUpdate = function (cart_Id) {
+  deleteItem(cart_Id);
+  renderCheckout();
+}
 
 $(document).ready(function () {
   renderCheckout();
