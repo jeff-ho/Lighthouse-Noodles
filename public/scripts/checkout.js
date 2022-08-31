@@ -12,8 +12,22 @@ const changeQuantity = function (cart_id, quant) {
   });
 };
 
+const sendText = function (total) {
+    $.ajax({
+      method: 'POST',
+      url: '/api/twilio',
+      data:{total}
+    })
+    .done((response) => {
+      console.log("Added to cart")
+    });
+}
 
-const submitOrder = function (cart_id, quant) {
+
+
+
+
+const submitOrder = function (total) {
   $.ajax({
     method: 'POST',
     url: '/api/order',
@@ -72,15 +86,18 @@ $(document).ready(function () {
       }
       let taxes = (sum / 100) * 0.13;
       let subtotal = sum / 100;
+      let total = (subtotal + taxes).toFixed(2);
+      let name = response.items[0].user_name
       $(`
       <span>Back to menu button</span>
       <span>
         <div>
             Subtotal: $${sum / 100}
-            Taxes: $${taxes}
-            Total: $${(subtotal + taxes).toFixed(2)}
+            Taxes: $${taxes.toFixed(2)}
+            Total: $${total}
         </div>
       </span>
+      <button id="submit-button" onClick="sendText(${total})">Order Now</button>
         `).appendTo(`#subtotal`);
     });
   };
