@@ -1,19 +1,23 @@
 .main-checkout{
-  background: #90bcd7;
+  background: beige;
+  ;
   display:flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #cartCategoriesEJS {
-    background:hsl(58, 44%, 61%);
-    font-size: 1.2rem; padding-left:2em;
+    //background:hsl(58, 44%, 61%);
+    font-size: 1.2rem;
+    padding-left:2em;
+    padding-right:0.5em;
     border-bottom: 2px solid black;
-    display:flex;
     align-items: flex-end;
     flex-direction: row-reverse;
     justify-content:flex-end;
     border-bottom: 1px solid black;
+
 }
 
 
@@ -29,22 +33,90 @@ img {
 }
 
 #cartCategories {
-  background:salmon;
+  //background:salmon;
   justify-content: flex-end;
-  flex-direction: row-reverse;
+  // flex-direction: row-reverse;
   padding-bottom: 1em;
   display:flex;
   align-items: flex-end;
   justify-content:space-between;
   align-items: center;
-  border: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+
+
  }
+
+#bottomCheckoutOutput{
+margin-top:1em;
+margin-bottom:1em;
+background: lightseagreen;
+display:flex;
+flex-direction: row;
+justify-content: center;
+
+}
+
+#checkoutSum{
+display:flex;
+padding-left:2rem;
+flex-direction:column;
+justify-content: center;
+}
+
 
 
  #cartCategories>span {
    padding-left:0.5em;
   }
 
- 
+
+.items-checkout{
+  max-height:60vh;
+  overflow: auto;
+}
+
+//border for all except the title
+.items-checkout> #cartCategories {
+border: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 10px;
+  padding-right:0.2em;
+}
+
+
+// #bottomCheckoutContainer{
+//   display:flex;
+//   flex-direction: row;
+// }
+#checkoutBox{
+  background:white;
+  border: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 10px;
+  padding-right:0.2em;
+  width: 15%;
+  height: 15%;
+  padding-left:1em;
+  margin-left:3em;
+  padding-bottom:1rem;
+}
+#checkoutBox > p{
+  border-bottom:0.5px solid black;
+  margin-right:1rem;
+
+}
+
+
+
+#innerSubCategoryTitle{
+  display:flex;
+  justify-content: center;
+}
+
+#innerSubCategoryTitle > span{
+  display:flex;
+  justify-content: center;
+  padding-right: 0.5em;
+
+}
