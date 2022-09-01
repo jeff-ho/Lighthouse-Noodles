@@ -10,13 +10,10 @@ const addToCheckout = (item) => {
     });
 };
 
-
 const addOneToItem = (itemId) => {
-
   return db.query(
     'UPDATE carts SET item_quantity = item_quantity + 1 WHERE id = $1;', [itemId])
     .then(data => {
-      //console.log(data.rows)
       return data.rows[0];
     });
 };
@@ -29,7 +26,13 @@ const deleteOneItem = (itemId) => {
     });
 };
 
+const clearCart = () => {
+  return db.query('DELETE FROM carts;')
+    .then(data => {
+      return data.rows[0];
+    });
+};
 
-module.exports = { addToCheckout, addOneToItem, deleteOneItem };
+module.exports = { addToCheckout, addOneToItem, deleteOneItem, clearCart };
 
 

@@ -41,7 +41,6 @@ app.use(
 //const widgetApiRoutes = require('./routes/widgets-api');
 const menuRoutes = require("./routes/menu");
 const registerRoutes = require("./routes/register");
-const orderNowRoutes = require("./routes/order_now");
 const checkoutRoutes = require("./routes/checkout");
 const appApiRoutes = require("./routes/appetizer-api");
 const noodleApiRoutes = require("./routes/noodle-api");
@@ -55,16 +54,15 @@ const submitOrderRoutesApi = require("./routes/order-api");
 const twilioSendRoutesApi = require("./routes/twilio-api");
 const deleteItemRoutesApi = require("./routes/deleteItem-api");
 const registerRoutesApi = require("./routes/register-api");
-const logoutRoutes = require('./routes/logout');
-const confirmationRoutes = require('./routes/confirmation')
-
+const logoutRoutes = require("./routes/logout");
+const confirmationRoutes = require("./routes/confirmation");
+const clearCartRoutes = require("./routes/clear-cart-api");
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use("/menu", menuRoutes);
 app.use("/register", registerRoutes);
-app.use("/order", orderNowRoutes);
 app.use("/checkout", checkoutRoutes);
 app.use("/api/menu/app", appApiRoutes);
 app.use("/api/menu/noodle", noodleApiRoutes);
@@ -80,7 +78,7 @@ app.use("/api/delete", deleteItemRoutesApi);
 app.use("/api/register", registerRoutesApi);
 app.use("/logout", logoutRoutes);
 app.use("/confirmation", confirmationRoutes);
-
+app.use("/api/clear", clearCartRoutes);
 
 // Note: mount other resources here, using the same pattern above
 
@@ -98,6 +96,3 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
-
-
-

@@ -9,5 +9,4 @@ const addUser = (email, name, phone) => {
     });
 };
 
-
 module.exports = { addUser };
