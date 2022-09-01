@@ -1,12 +1,4 @@
-// body {
-//   background-image: url('/images/regiNoodle.jpg');
-//   background-repeat: no-repeat;
-//   background-attachment: fixed;
-//   background-position: center;
-//   display:flex;
-//   flex-direction: column;
 
-// }
 
 
 
@@ -33,6 +25,19 @@
 
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 
+// body {
+//   background-image: url('/images/regiNoodle.jpg');
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-position: center;
+//   display:flex;
+//   flex-direction: column;
+
+// }
+
+
+
+
 body{
   // background: #fff;
 
@@ -41,6 +46,8 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  display:flex;
+  flex-direction: column;
 }
 h2{
   padding-top: 1.5rem;
