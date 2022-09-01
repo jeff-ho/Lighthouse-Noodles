@@ -18,7 +18,7 @@ const sendText = function (total) {
     .done((response) => {
       console.log("Added to cart");
     });
-}
+};
 
 const submitOrder = function (total) {
   $.ajax({
@@ -40,7 +40,7 @@ const deleteItem = function (cart_id) {
   .done((response) => {
     console.log("Deleted Item");
   });
-}
+};
 
 const clearCart = function () {
   $.ajax({
@@ -51,7 +51,7 @@ const clearCart = function () {
   .done((response) => {
     console.log("Deleted Cart");
   });
-}
+};
 
 const renderCheckout = function () {
   $.ajax({
@@ -117,9 +117,6 @@ const renderCheckout = function () {
         </div>
       </div>
     </div>
-
-
-
       `).appendTo(`#subtotal`);
   });
 };
@@ -132,7 +129,7 @@ const renderAndUpdate = function (cartId, quant) {
 const deleteAndUpdate = function (cart_Id) {
   deleteItem(cart_Id);
   renderCheckout();
-}
+};
 
 $(document).ready(function () {
   renderCheckout();

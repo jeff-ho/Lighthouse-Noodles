@@ -2,27 +2,24 @@ const extractId = function (click) {
   $.ajax({
     method: 'POST',
     url: '/api/menu/cart',
-    data: {click} // added -<<<<<< this
+    data: {click}
   })
   .done((response) => {
-
     console.log("Added to cart")
   });
   }
 
 const cartAppear = function () {
-
  $('#cart-notification').show();
 
  setTimeout(() => {
   $('#cart-notification').fadeOut();
- },500)
+ },500);
 };
 
 
 $(document).ready(function () {
   $("#cart-notification").hide();
-
 
   const appetizers = function() {
     $.ajax({
@@ -49,7 +46,6 @@ $(document).ready(function () {
     });
   }
   appetizers();
-
 
   const noodles = function() {
     $.ajax({

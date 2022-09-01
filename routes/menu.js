@@ -3,8 +3,8 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   const templateVars = {
-    user : req.session.name
-  }
+    user: req.session.name,
+  };
   res.render("menu", templateVars);
 });
 

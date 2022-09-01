@@ -26,13 +26,12 @@ const deleteOneItem = (itemId) => {
     });
 };
 
-
 const clearCart = () => {
   return db.query('DELETE FROM carts;')
     .then(data => {
       return data.rows[0];
     });
-}
+};
 
 module.exports = { addToCheckout, addOneToItem, deleteOneItem, clearCart };
 

@@ -5,6 +5,6 @@ $("#submit-button").on('click', function() {
     data:{}
   })
   .done((response) => {
-    console.log("Added to cart")
+    console.log("Added to cart");
   });
 })
