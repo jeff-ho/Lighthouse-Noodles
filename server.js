@@ -41,7 +41,7 @@ app.use(
 //const widgetApiRoutes = require('./routes/widgets-api');
 const menuRoutes = require("./routes/menu");
 const registerRoutes = require("./routes/register");
-const orderNowRoutes = require("./routes/order_now");
+//const orderNowRoutes = require("./routes/order_now");
 const checkoutRoutes = require("./routes/checkout");
 const appApiRoutes = require("./routes/appetizer-api");
 const noodleApiRoutes = require("./routes/noodle-api");
@@ -64,7 +64,7 @@ const confirmationRoutes = require('./routes/confirmation')
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use("/menu", menuRoutes);
 app.use("/register", registerRoutes);
-app.use("/order", orderNowRoutes);
+//app.use("/order", orderNowRoutes);
 app.use("/checkout", checkoutRoutes);
 app.use("/api/menu/app", appApiRoutes);
 app.use("/api/menu/noodle", noodleApiRoutes);
