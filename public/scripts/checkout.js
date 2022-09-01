@@ -105,7 +105,7 @@ const renderCheckout = function () {
     $(`
     <div id="bottomCheckoutOutput">
 
-      <div><button id="submit-button" onClick="sendText(${total});window.location.href='/confirmation'">Order Now</button></div>
+      <div><button id="submit-button" onClick="sendText(${total})">Order Now</button></div>
 
       <div id="checkoutSum">
         <div >
