@@ -68,10 +68,16 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.2s;
+  border-radius: 5px;
 }
 
 .text a:hover {
   letter-spacing: 6px;
+}
+
+.user-name {
+  color: rgb(210, 8, 95);
+  font-weight: 100;
 }
 
 
