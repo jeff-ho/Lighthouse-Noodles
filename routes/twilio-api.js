@@ -21,7 +21,8 @@ restaurantString = restaurantString + ` | Total Price: $${totalPrice} |`;
 
 sendText.sendTextToUser(totalPrice);
 
-sendText.sendTextToRestaurant(restaurantString);
-});
+sendText.sendTextToRestaurant(restaurantString)
+
+})
 
 module.exports = router;
