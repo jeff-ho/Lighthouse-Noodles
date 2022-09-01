@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
 .header-home{
   background-size: cover;
   position: relative;
@@ -122,6 +124,7 @@ align-items: center;
   touch-action: manipulation;
   text-decoration: none !important;
   color: #4C5958;
+  font-family: "Playfair Design";
 }
 
 .button-52:after {
@@ -266,6 +269,14 @@ align-items: center;
     background-color: #8AA6A3;
   }
 
+}
+
+h1{
+  font-family: 'Playfair Display', sans-serif;
+}
+
+.nav-name{
+  font-family: 'Playfair Display', sans-serif;
 }
 
 
