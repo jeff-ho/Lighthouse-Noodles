@@ -5,8 +5,7 @@ const itemQueries = require('../db/queries/checkout');
 router.post('/', (req, res) => {
 
   let itemId = req.body.click;
-  console.log(itemId, 'mdaspomdpasdmapsomdpsaodmsapodmapsmpdp')
-
+  
   itemQueries.addOneToItem(itemId)
     .then(items => {
       res.json({ items });

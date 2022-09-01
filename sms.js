@@ -14,17 +14,18 @@ const sendTextToUser = function(total) {
   .then(message => console.log(message.sid));
 }
 
-// const sendTextToRestaurant = function(total, itemList) {
-//   client.messages
-//   .create({
-//      body: `New Order! Order:   Your order total is: $${total}.   `,
-//      from: process.env.OUR_PHONE_NUMBER,
-//      to: process.env.PHONE_NUMBER
-//    })
-//   .then(message => console.log(message.sid));
-// }
 
-module.exports = { sendTextToUser }
+const sendTextToRestaurant = function(restaurantString) {
+  client.messages
+  .create({
+     body: `${restaurantString}`,
+     from: process.env.OUR_PHONE_NUMBER,
+     to: process.env.PHONE_NUMBER
+   })
+  .then(message => console.log(message.sid));
+}
+
+module.exports = { sendTextToUser, sendTextToRestaurant }
 
 
 

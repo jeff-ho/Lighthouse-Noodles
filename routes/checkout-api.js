@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
 
   itemQueries.addToCheckout()
     .then(items => {
+      req.session.cartItems = items
       res.json({ items });
     })
     .catch(err => {

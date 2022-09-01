@@ -5,7 +5,7 @@ router.get("/", (req, res) => {
   const templateVars = {
     user : req.session.name
   }
-  res.render("menu", templateVars);
+  res.render("confirmation-page", templateVars);
 });
 
 module.exports = router;

@@ -1,10 +1,25 @@
+body {
+  background-image: url('/images/noodleSoup.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+
+}
+
+
 .main-checkout{
-  background: beige;
-  ;
+  //background: beige;
+  width:100%;
   display:flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
+}
+
+#cartCategoriesTitle{
+  width:50%;
+
 }
 
 #cartCategoriesEJS {
@@ -18,6 +33,7 @@
     justify-content:flex-end;
     border-bottom: 1px solid black;
 
+
 }
 
 
@@ -28,19 +44,24 @@
 
 img {
   margin-right: 1em;
-  border: 2em, solid, black;
+  //border: 2em, solid, black;
+  width:15%;
   float: left;
+  height:auto;
 }
 
 #cartCategories {
   //background:salmon;
   justify-content: flex-end;
   // flex-direction: row-reverse;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   display:flex;
   align-items: flex-end;
   justify-content:space-between;
   align-items: center;
+  padding-right:0.4em;
+  margin-bottom:2px;
+  font-size:1.75em;
 
 
  }
@@ -48,24 +69,63 @@ img {
 #bottomCheckoutOutput{
 margin-top:1em;
 margin-bottom:1em;
-background: lightseagreen;
+//background: lightseagreen;
 display:flex;
 flex-direction: row;
 justify-content: center;
+border-right: 1px solid black;
+border-left: 1px solid black;
+border-bottom: 1px solid black;
+
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
 
 }
 
+//order now button
+#bottomCheckoutOutput>div:first-child{
+  //background:pink;
+  display:flex;
+  align-items: center;
+  width:50%;
+  padding-left:1em;
+}
+
+
+
+
 #checkoutSum{
+//background: green;
 display:flex;
 padding-left:2rem;
-flex-direction:column;
-justify-content: center;
+flex-direction:row;
+// justify-content: center;
+// align-items: center;
+width:50%;
+}
+
+#totalPrices{
+padding-left:1em;
+}
+
+
+
+#submit-button{
+  width:90%;
+  height:30%;
+
+}
+
+.totalFSize{
+  font-size: 1.75em;
+  border-top: 1px solid black;
 }
 
 
 
  #cartCategories>span {
    padding-left:0.5em;
+   font-weight: 300;
   }
 
 
@@ -95,8 +155,8 @@ border: 1px solid black;
   border-right: 1px solid black;
   border-radius: 10px;
   padding-right:0.2em;
-  width: 15%;
-  height: 15%;
+  width: 25%;
+  height: auto;
   padding-left:1em;
   margin-left:3em;
   padding-bottom:1rem;
@@ -112,11 +172,46 @@ border: 1px solid black;
 #innerSubCategoryTitle{
   display:flex;
   justify-content: center;
+
 }
 
 #innerSubCategoryTitle > span{
   display:flex;
   justify-content: center;
   padding-right: 0.5em;
+
+}
+
+#paymentInfo{
+  font-size: 1.5em;
+}
+
+
+@media (max-width: 950px) {
+  .main-checkout{
+    //background: beige;
+
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #checkoutBox {
+    border-bottom:0.5px solid black;
+    margin-right:1rem;
+    width:55%;
+    justify-content: center;
+    margin-left:0em;
+  }
+
+
+
+
+
+  #checkoutBox>button{
+    justify-content: center;
+    font-size: 50;
+  }
 
 }
