@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 body{
   background: #F2F2F2;
@@ -131,4 +132,16 @@ margin-top: 2em;
         margin-top: -10px;
       }
 
+    }
+
+    .nav-name{
+      font-family: 'Playfair Display', sans-serif;
+    }
+
+    #navbar-example2 {
+        font-family: 'Playfair Display', sans-serif;
+    }
+
+    .text-center{
+        font-family: 'Playfair Display', sans-serif;
     }

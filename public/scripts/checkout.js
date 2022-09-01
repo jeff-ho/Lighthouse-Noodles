@@ -2,10 +2,10 @@ const changeQuantity = function (cart_id, quant) {
   $.ajax({
     method: 'POST',
     url: '/api/quantity',
-    data: {cart_id, quant} // added -<<<<<< this
+    data: {cart_id, quant}
   })
   .done((response) => {
-    console.log("Quantity changed")
+    console.log("Quantity changed");
   });
 };
 
@@ -16,39 +16,31 @@ const sendText = function (total) {
       data:{total}
     })
     .done((response) => {
-      console.log("Added to cart")
+      console.log("Added to cart");
     });
 }
-
 
 const submitOrder = function (total) {
   $.ajax({
     method: 'POST',
     url: '/api/order',
-    data: {cart_id, quant} // added -<<<<<< this
+    data: {cart_id, quant}
   })
   .done((response) => {
-    // const $cartList = $('<div></div>');
-    // $usersList.empty();
-    console.log("Submitted")
+    console.log("Order submitted");
   });
 };
 
 const deleteItem = function (cart_id) {
-  console.log('made it to delete function')
-  console.log(cart_id,'cart id')
   $.ajax({
     method: 'POST',
     url: '/api/delete',
     data: {cart_id}
   })
   .done((response) => {
-    console.log("Deleted Item")
+    console.log("Deleted Item");
   });
 }
-
-
-
 
 const renderCheckout = function () {
   $.ajax({
@@ -64,9 +56,7 @@ const renderCheckout = function () {
       $(
         `
         <div id="cartCategories">
-
               <img src="${checkout.img}"  width="75" height="75">
-
               <span>${checkout.name}</span>
               <span>
               <select name="quantity" id="adjustItemQuantity" onChange="renderAndUpdate(${checkout.cart_id}, this.value)">
@@ -96,31 +86,25 @@ const renderCheckout = function () {
         </div>`
       ).appendTo($checkoutList);
       sum += checkout.price * checkout.quantity;
-
     }
     let taxes = (sum / 100) * 0.13;
     let subtotal = sum / 100;
     let total = (subtotal + taxes).toFixed(2);
-
     $(`
     <div id="bottomCheckoutOutput">
-
       <div><button id="submit-button" onClick="sendText(${total});window.location.href='/confirmation'">Order Now</button></div>
-
       <div id="checkoutSum">
         <div >
           <p>Subtotal: </p>
           <p>Taxes: </p>
           <p class="totalFSize">Total: </p>
         </div>
-
         <div id="totalPrices">
           <p>$${sum / 100}</p>
           <p>$${taxes.toFixed(2)}</p>
           <p class="totalFSize">$${total}</p>
         </div>
       </div>
-
     </div>
 
 

@@ -56,7 +56,8 @@ const twilioSendRoutesApi = require("./routes/twilio-api");
 const deleteItemRoutesApi = require("./routes/deleteItem-api");
 const registerRoutesApi = require("./routes/register-api");
 const logoutRoutes = require('./routes/logout');
-const confirmationRoutes = require('./routes/confirmation')
+const confirmationRoutes = require('./routes/confirmation');
+
 
 
 // Mount all resource routes
