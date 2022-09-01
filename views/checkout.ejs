@@ -16,10 +16,7 @@
   <link rel="stylesheet" href="/styles/checkout.css" />
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/twilio.js"></script>
- 
-
-
-  <title>Home Page</title>
+  <title>Checkout</title>
   <script defer src="/scripts/checkout.js"></script>
   <script defer src="/scripts/menu.js"></script>
   <script defer src="/scripts/checkout.js"></script>
@@ -30,42 +27,29 @@
   <%- include('partials/_header'); %>
 
   <div class="main-checkout">
-
-
     <div id="cartCategoriesTitle">
       <h1>Shopping Cart</h1>
       <div id="innerSubCategoryTitle">
-
         <span>Product</span>
         <span>Quantity</span>
         <span> Total Price</span>
-
       </div>
-
-
       <div id="bottomCheckoutContainer">
         <div class="items-checkout"></div>
         <div id="subtotal"></div>
       </div>
-
     </div>
-
-
-
     <div id="checkoutBox">
-      <p id="paymentInfo">Payment Info.</p>
+      <p id="paymentInfo">Payment Information</p>
       <p>Payment method</p>
       <p><i class="fa-solid fa-credit-card"></i> Credit card</p>
-      <p> <i class="fa-solid fa-phone"></i></i> insert phone number here</p>
-      <p>insert user name here</p>
-      <p>Card Number:</p>
-      <p>**** **** **** 2022</p>
+      <p>Card Number: **** **** **** 2022</p>
+      <p> <i class="fa-solid fa-phone"></i> </i>Phone Number: <%=phone%></p>
+      <p>Name: <%=user%></p>
+      <p>Email: <%=email%></p>
     </div>
-
-
-
-
   </div>
+
 
 
 
