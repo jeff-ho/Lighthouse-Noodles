@@ -1,21 +1,18 @@
-const express = require('express');
-const router  = express.Router();
-const itemQueries = require('../db/queries/checkout');
+const express = require("express");
+const router = express.Router();
+const itemQueries = require("../db/queries/checkout");
 
-router.post('/', (req, res) => {
-
+router.post("/", (req, res) => {
   let itemId = req.body.click;
-  
-  itemQueries.addOneToItem(itemId)
-    .then(items => {
+
+  itemQueries
+    .addOneToItem(itemId)
+    .then((items) => {
       res.json({ items });
     })
-    .catch(err => {
-      res
-        .status(500)
-        .json({ error: err.message });
+    .catch((err) => {
+      res.status(500).json({ error: err.message });
     });
 });
-
 
 module.exports = router;

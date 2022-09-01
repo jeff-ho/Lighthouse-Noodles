@@ -2,11 +2,10 @@ const express = require("express");
 const router = express.Router();
 const itemQueries = require("../db/queries/checkout");
 
-router.get("/", (req, res) => {
+router.post("/", (req, res) => {
   itemQueries
-    .addToCheckout()
+    .clearCart()
     .then((items) => {
-      req.session.cartItems = items;
       res.json({ items });
     })
     .catch((err) => {

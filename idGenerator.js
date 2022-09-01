@@ -7,6 +7,6 @@ function generateRandomString() {
     result += chars.charAt(Math.floor(Math.random() * length));
   }
   return result;
-};
+}
 
-module.exports = {generateRandomString}
+module.exports = { generateRandomString };

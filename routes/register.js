@@ -1,14 +1,12 @@
-const express = require('express');
-const router  = express.Router();
+const express = require("express");
+const router = express.Router();
 
-
-router.get('/', (req, res) => {
-  let templateVars = {
+router.get("/", (req, res) => {
+  let templateVars = {};
+  if (req.session) {
+    templateVars = { user: req.session.name };
   }
-  if(req.session) {
-    templateVars={user : req.session.name}
-  }
-  res.render ('register', templateVars)
+  res.render("register", templateVars);
 });
 
 module.exports = router;

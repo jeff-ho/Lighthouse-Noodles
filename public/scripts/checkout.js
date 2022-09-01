@@ -2,10 +2,10 @@ const changeQuantity = function (cart_id, quant) {
   $.ajax({
     method: 'POST',
     url: '/api/quantity',
-    data: {cart_id, quant} // added -<<<<<< this
+    data: {cart_id, quant}
   })
   .done((response) => {
-    console.log("Quantity changed")
+    console.log("Quantity changed");
   });
 };
 
@@ -16,39 +16,42 @@ const sendText = function (total) {
       data:{total}
     })
     .done((response) => {
-      console.log("Added to cart")
+      console.log("Added to cart");
     });
-}
-
+};
 
 const submitOrder = function (total) {
   $.ajax({
     method: 'POST',
     url: '/api/order',
-    data: {cart_id, quant} // added -<<<<<< this
+    data: {cart_id, quant}
   })
   .done((response) => {
-    // const $cartList = $('<div></div>');
-    // $usersList.empty();
-    console.log("Submitted")
+    console.log("Order submitted");
   });
 };
 
 const deleteItem = function (cart_id) {
-  console.log('made it to delete function')
-  console.log(cart_id,'cart id')
   $.ajax({
     method: 'POST',
     url: '/api/delete',
     data: {cart_id}
   })
   .done((response) => {
-    console.log("Deleted Item")
+    console.log("Deleted Item");
   });
-}
+};
 
-
-
+const clearCart = function () {
+  $.ajax({
+    method: 'POST',
+    url: '/api/clear',
+    data: {}
+  })
+  .done((response) => {
+    console.log("Deleted Cart");
+  });
+};
 
 const renderCheckout = function () {
   $.ajax({
@@ -109,19 +112,17 @@ const renderCheckout = function () {
         `
       ).appendTo($checkoutList);
       sum += checkout.price * checkout.quantity;
-
     }
     let taxes = (sum / 100) * 0.13;
     let subtotal = sum / 100;
     let total = (subtotal + taxes).toFixed(2);
-
     $(`
 
 
     <div id="bottomCheckoutOutput">
 
     <div class="submit-button">
-    <button class="button-52" onClick="sendText(${total});window.location.href='/confirmation'">Order Now</button>
+    <button class="button-52" onClick="sendText(${total});window.location.href='/confirmation'; clearCart()">Order Now</button>
     </div>
 
     <div>
@@ -148,7 +149,7 @@ const renderAndUpdate = function (cartId, quant) {
 const deleteAndUpdate = function (cart_Id) {
   deleteItem(cart_Id);
   renderCheckout();
-}
+};
 
 $(document).ready(function () {
   renderCheckout();
