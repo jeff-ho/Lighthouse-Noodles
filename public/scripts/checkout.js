@@ -63,37 +63,50 @@ const renderCheckout = function () {
     for (const checkout of response.items) {
       $(
         `
-        <div id="cartCategories">
+        <div id="cart-categories">
 
-              <img src="${checkout.img}"  width="75" height="75">
+        <div class="cart-item">
+        <img src="${checkout.img}"  width="75" height="75">
+        </div>
 
-              <span>${checkout.name}</span>
-              <span>
-              <select name="quantity" id="adjustItemQuantity" onChange="renderAndUpdate(${checkout.cart_id}, this.value)">
-                      <option selected="selected" value="${checkout.quantity}">${checkout.quantity}</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-              </select>
-              </span>
-              <span>Price: $${(checkout.price / 100) * checkout.quantity}</span>
-              <span>
-              <input class="btn btn-primary" type="submit" value="delete" onClick="deleteAndUpdate(${checkout.cart_id})">
-              </span>
-            </span>
-        </div>`
+        <div class="cart-item">
+        <p>${checkout.name}</p>
+        </div>
+
+        <div class="cart-item">
+        <select name="quantity" id="adjustItemQuantity" onChange="renderAndUpdate(${checkout.cart_id}, this.value)">
+        <option selected="selected" value="${checkout.quantity}">${checkout.quantity}</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        </select>
+        </div>
+
+        <div class="cart-item">
+        <p>
+        Price: $${(checkout.price / 100) * checkout.quantity}
+        </p>
+        </div>
+
+        <div class="cart-item">
+        <button class="btn btn-danger" type="submit" value="delete" onClick="deleteAndUpdate(${checkout.cart_id})" ><i class="fa-solid fa-trash"></i></button>
+        </div>
+
+        </div>
+
+        `
       ).appendTo($checkoutList);
       sum += checkout.price * checkout.quantity;
 
@@ -103,25 +116,23 @@ const renderCheckout = function () {
     let total = (subtotal + taxes).toFixed(2);
 
     $(`
+
+
     <div id="bottomCheckoutOutput">
 
-      <div><button id="submit-button" onClick="sendText(${total});window.location.href='/confirmation'">Order Now</button></div>
+    <div class="submit-button">
+    <button class="button-52" onClick="sendText(${total});window.location.href='/confirmation'">Order Now</button>
+    </div>
 
-      <div id="checkoutSum">
-        <div >
-          <p>Subtotal: </p>
-          <p>Taxes: </p>
-          <p class="totalFSize">Total: </p>
-        </div>
-
-        <div id="totalPrices">
-          <p>$${sum / 100}</p>
-          <p>$${taxes.toFixed(2)}</p>
-          <p class="totalFSize">$${total}</p>
-        </div>
-      </div>
+    <div>
+    <p><strong>Subtotal:</strong> $${sum / 100}</p>
+    <p><strong>Taxes:</strong> $${taxes.toFixed(2)}</p>
+    <h4>Total: $${total}</h4>
+    </div>
 
     </div>
+
+
 
 
 
