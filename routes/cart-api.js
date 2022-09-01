@@ -10,6 +10,8 @@ router.post('/', (req, res,) => {
 
     .then(items => {
      console.log("ITEM ADDED TO CART")
+      res.send()
+      //need res.send to let them server know a response is made. 
     })
     .catch(err => {
       res
