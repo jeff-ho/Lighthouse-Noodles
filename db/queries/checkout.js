@@ -27,6 +27,13 @@ const deleteOneItem = (itemId) => {
 };
 
 
-module.exports = { addToCheckout, addOneToItem, deleteOneItem };
+const clearCart = () => {
+  return db.query('DELETE FROM carts;')
+    .then(data => {
+      return data.rows[0];
+    });
+}
+
+module.exports = { addToCheckout, addOneToItem, deleteOneItem, clearCart };
 
 

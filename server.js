@@ -57,7 +57,7 @@ const deleteItemRoutesApi = require("./routes/deleteItem-api");
 const registerRoutesApi = require("./routes/register-api");
 const logoutRoutes = require('./routes/logout');
 const confirmationRoutes = require('./routes/confirmation');
-
+const clearCartRoutes = require('./routes/clear-cart-api');
 
 
 // Mount all resource routes
@@ -81,6 +81,7 @@ app.use("/api/delete", deleteItemRoutesApi);
 app.use("/api/register", registerRoutesApi);
 app.use("/logout", logoutRoutes);
 app.use("/confirmation", confirmationRoutes);
+app.use("/api/clear", clearCartRoutes);
 
 
 // Note: mount other resources here, using the same pattern above

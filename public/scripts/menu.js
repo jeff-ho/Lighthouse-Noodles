@@ -10,8 +10,19 @@ const extractId = function (click) {
   });
   }
 
+const cartAppear = function () {
+
+ $('#cart-notification').show();
+
+ setTimeout(() => {
+  $('#cart-notification').fadeOut();
+ },500)
+};
+
 
 $(document).ready(function () {
+  $("#cart-notification").hide();
+
 
   const appetizers = function() {
     $.ajax({
@@ -29,7 +40,7 @@ $(document).ready(function () {
           <img src=${appetizer.img_url} class="item-image">
           <h4>${appetizer.name}</h4>
           <p>Price: $${(appetizer.price)/100}</p>
-          <button id="${appetizer.id}" onClick="extractId(this.id)" class="btn"><i class="fa-solid fa-cart-plus"></i> Order Now</button>
+          <button id="${appetizer.id}"  onClick="extractId(this.id); cartAppear()" class="btn"><i class="fa-solid fa-cart-plus"></i> Order Now</button>
 
           </div>
           `
@@ -56,7 +67,7 @@ $(document).ready(function () {
           <img src=${noodle.img_url} class="item-image">
           <h4>${noodle.name}</h4>
           <p>Price: $${(noodle.price)/100}</p>
-          <button id="${noodle.id}" onClick="extractId(this.id)" class="btn"><i class="fa-solid fa-cart-plus"></i> Order Now</button>
+          <button id="${noodle.id}"  onClick="extractId(this.id); cartAppear()" class="btn"><i class="fa-solid fa-cart-plus"></i> Order Now</button>
           </div>
           `
         ).appendTo($noodleList);
@@ -81,7 +92,7 @@ $(document).ready(function () {
           <img src=${snack.img_url} class="item-image">
           <h5>${snack.name}</h5>
           <p>Price: $${(snack.price)/100} </p>
-          <button id="${snack.id}" onClick="extractId(this.id)" class="btn"><i class="fa-solid fa-cart-plus"></i> Order Now</button>
+          <button id="${snack.id}"  onClick="extractId(this.id); cartAppear()" class="btn"><i class="fa-solid fa-cart-plus"></i> Order Now</button>
           </div>
           `
         ).appendTo($snackList);
@@ -106,17 +117,16 @@ $(document).ready(function () {
           <img src=${drink.img_url} class="item-image">
           <h4>${drink.name}</h4>
           <p>Price: $${(drink.price)/100}</p>
-          <button id="${drink.id}" onClick="extractId(this.id)" class="btn"><i class="fa-solid fa-cart-plus"></i> Order Now</button>
+          <button id="${drink.id}"  onClick="extractId(this.id); cartAppear()" class="btn"><i class="fa-solid fa-cart-plus"></i> Order Now</button>
           </div>
           `
         ).appendTo($drinkList);
       }
-
     });
   }
   drinks();
 
-})
+});
 
 
 

@@ -7,6 +7,7 @@ body{
 
 }
 
+
 listExample{
   position: relative;
 }
@@ -98,7 +99,7 @@ margin-top: 2em;
     width: 70px;
     height: 70px;
   }
-  @media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
 
     #nav-bar {
       position:relative;
@@ -132,16 +133,38 @@ margin-top: 2em;
         margin-top: -10px;
       }
 
-    }
+}
 
-    .nav-name{
-      font-family: 'Playfair Display', sans-serif;
-    }
+.nav-name{
+  font-family: 'Playfair Display', sans-serif;
+}
 
-    #navbar-example2 {
-        font-family: 'Playfair Display', sans-serif;
-    }
+#navbar-example2 {
+  font-family: 'Playfair Display', sans-serif;
+}
 
-    .text-center{
-        font-family: 'Playfair Display', sans-serif;
-    }
+.text-center{
+  font-family: 'Playfair Display', sans-serif;
+}
+
+#cart-notification{
+  position:fixed;
+  bottom: 100px;
+  right: 50px;
+  display: inline-block;
+  font-size: 1em;
+  background: rgb(255, 255, 255);
+  padding-top: 30px;
+  padding-right: 60px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  text-decoration: none;
+  color: black;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border-radius: 5px;
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 100;
+}

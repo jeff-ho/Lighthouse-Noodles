@@ -42,6 +42,17 @@ const deleteItem = function (cart_id) {
   });
 }
 
+const clearCart = function () {
+  $.ajax({
+    method: 'POST',
+    url: '/api/clear',
+    data: {}
+  })
+  .done((response) => {
+    console.log("Deleted Cart");
+  });
+}
+
 const renderCheckout = function () {
   $.ajax({
     method: "GET",
@@ -92,7 +103,7 @@ const renderCheckout = function () {
     let total = (subtotal + taxes).toFixed(2);
     $(`
     <div id="bottomCheckoutOutput">
-      <div><button id="submit-button" onClick="sendText(${total});window.location.href='/confirmation'">Order Now</button></div>
+      <div><button id="submit-button" onClick="sendText(${total});window.location.href='/confirmation'; clearCart()">Order Now</button></div>
       <div id="checkoutSum">
         <div >
           <p>Subtotal: </p>
