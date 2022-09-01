@@ -20,7 +20,7 @@
 </head>
 <body>
   <%- include('partials/_header') %>
-  <form action="/api/register" method="POST" style="padding-left: 20px; padding-top: 5px">
+  <!-- <form action="/api/register" method="POST" style="padding-left: 20px; padding-top: 5px">
     <h1>Registration</h1>
     <h5>Email:</h5>
     <p><input type="email" name="email" /> </p>
@@ -29,7 +29,41 @@
     <h5>Phone Number:</h5>
     <p><input type="tel" name="phone" /> </p>
     <p><button class="btn btn-primary">Register</button></p>
-  </form>
+  </form> -->
+
+  <form action="/api/register" method="POST" >
+  <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-5">
+     <div class="card">
+       <h2 class="card-title text-center">Register </h2>
+        <div class="card-body py-md-4">
+         <form _lpchecked="1">
+            <div class="form-group">
+               <input type="text" class="form-control" id="name" name="email" placeholder="Name">
+          </div>
+          <div class="form-group">
+               <input type="email" class="form-control" id="email" name="name" placeholder="Email">
+                              </div>
+
+
+     <div class="form-group">
+       <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+     </div>
+
+     <div class="d-flex flex-row align-items-center justify-content-between">
+        <a href="#">Login</a>
+                                  <button class="btn btn-primary">Register</button>
+
+            </div>
+         </form>
+       </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+</form>
 
 
 
