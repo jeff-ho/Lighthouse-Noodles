@@ -11,6 +11,7 @@ router.post("/", (req, res) => {
   let session = req.session;
   session.name = userName;
   session.phone = phone;
+  session.email = email;
 
   itemQueries
     .addUser(email, userName, phone)
