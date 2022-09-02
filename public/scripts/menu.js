@@ -10,7 +10,7 @@ const extractId = function (click) {
   }
 
 const cartAppear = function () {
- $('#cart-notification').show();
+ $('#cart-notification').slideToggle();
 
  setTimeout(() => {
   $('#cart-notification').fadeOut();
