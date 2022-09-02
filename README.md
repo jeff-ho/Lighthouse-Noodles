@@ -49,9 +49,3 @@ Mohammed Abbas - https://github.com/mo-ab93
 
 
 
-!['Homepage']( link here)
-!['Menu']( link here)
-!['Checkout']( link here)
-!['Confirmation']( link here)
-!['TextConirmation']( link here)
-
