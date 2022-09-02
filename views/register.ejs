@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-  crossorigin="anonymous"
-/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,57 +12,47 @@
   <link rel="stylesheet" href="/styles/menu.css" />
   <script src="/vendor/jquery-3.0.0.js"></script>
   <link rel="stylesheet" href="/styles/register.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="     crossorigin="anonymous" referrerpolicy="no-referrer" />      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <title>Register</title>
 </head>
+
 <body>
-  <!-- <%- include('partials/_header') %> -->
-  <!-- <form action="/api/register" method="POST" style="padding-left: 20px; padding-top: 5px">
-    <h1>Registration</h1>
-    <h5>Email:</h5>
-    <p><input type="email" name="email" /> </p>
-    <h5>Name:</h5>
-    <p> <input type="text" name="name" /> </p>
-    <h5>Phone Number:</h5>
-    <p><input type="tel" name="phone" /> </p>
-    <p><button class="btn btn-primary">Register</button></p>
-  </form> -->
   <%- include('partials/_header') %>
 
-  <form action="/api/register" method="POST" >
-  <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-md-5">
-     <div class="card">
-       <h2 class="card-title text-center">Register </h2>
-        <div class="card-body py-md-4">
-         <form _lpchecked="1">
-            <div class="form-group">
-               <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-          </div>
-          <div class="form-group">
-               <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                              </div>
+    <form action="/api/register" method="POST">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-5">
+            <div class="card">
+              <h2 class="card-title text-center">Register </h2>
+              <div class="card-body py-md-4">
+                <form _lpchecked="1">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                  </div>
 
 
-     <div class="form-group">
-       <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
-     </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+                  </div>
 
-     <div class="d-flex flex-row align-items-center justify-content-between">
+                  <div class="d-flex flex-row align-items-center justify-content-between">
 
-                                  <button class="btn btn-primary">Register</button>
+                    <button class="btn btn-primary">Register</button>
 
+                  </div>
+                </form>
+              </div>
             </div>
-         </form>
-       </div>
-    </div>
-  </div>
-  </div>
-  </div>
+          </div>
+        </div>
+      </div>
 
-</form>
-
-
-
-
+    </form>

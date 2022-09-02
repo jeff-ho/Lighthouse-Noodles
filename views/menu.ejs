@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-  crossorigin="anonymous"
-  />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
   <link rel="stylesheet" href="/styles/menu.css" />
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,83 +14,71 @@
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/menu.js"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="     crossorigin="anonymous" referrerpolicy="no-referrer" />      <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <title>Lighthouse Noodle Menu</title>
 </head>
+
 <body>
   <%- include('partials/_header'); %>
-  <div class="header-menu">
-    <img src="../images/menu-header.jpg" class="img-fluid" alt="...">
-  </div>
-
-
-  <nav id="navbar-example2" class="navbar bg-light px-3 mb-3 justify-content-center">
-
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link" id="apps-link" href="#apps">Appetizers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="noodle-link" href="#noods">Noodle Soup</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="snacks-link" href="#snacks">Snacks</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="drinks-link" href="#drinks">Drinks</a>
-      </li>
-
-    </ul>
-  </nav>
-  <div id="item-container"data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2 d-flex flex-column" tabindex="0">
-    <div class="d-flex flex-column">
-      <h4 id="apps" class="text-center">Appetizers</h4>
-      <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="appetizer-container"></div>
+    <div class="header-menu">
+      <img src="../images/menu-header.jpg" class="img-fluid" alt="...">
     </div>
-  <div class="d-flex flex-column">
-    <h4 id="noods" class="text-center">House Special Noodle Soup</h4>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="noodle-container"></div>
-  </div>
-  <div class="d-flex flex-column" >
-    <h4 id="snacks" class="text-center">Snacks</h4>
-    <div  class="d-flex flex-sm-row flex-wrap justify-content-center" id="snack-container"></div>
-  </div>
-  <div class="d-flex flex-column">
-    <h4 id="drinks" class="text-center">Drinks</h4>
-    <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="drink-container"></div>
-  </div>
-  </div>
 
-  <div id='cart-notification'>
-    <p id='cart-text'>Added To Cart</p>
-  </div>
+
+    <nav id="navbar-example2" class="navbar bg-light px-3 mb-3 justify-content-center">
+
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" id="apps-link" href="#apps">Appetizers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="noodle-link" href="#noods">Noodle Soup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="snacks-link" href="#snacks">Snacks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="drinks-link" href="#drinks">Drinks</a>
+        </li>
+
+      </ul>
+    </nav>
+    <div id="item-container" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2 d-flex flex-column" tabindex="0">
+      <div class="d-flex flex-column">
+        <h4 id="apps" class="text-center">Appetizers</h4>
+        <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="appetizer-container"></div>
+      </div>
+      <div class="d-flex flex-column">
+        <h4 id="noods" class="text-center">House Special Noodle Soup</h4>
+        <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="noodle-container"></div>
+      </div>
+      <div class="d-flex flex-column">
+        <h4 id="snacks" class="text-center">Snacks</h4>
+        <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="snack-container"></div>
+      </div>
+      <div class="d-flex flex-column">
+        <h4 id="drinks" class="text-center">Drinks</h4>
+        <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="drink-container"></div>
+      </div>
+    </div>
+
+    <div id='cart-notification'>
+      <p id='cart-text'>Added To Cart</p>
+    </div>
 
     <%- include('partials/_footer'); %>
 
 
-
-
-<!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
-
-<!-- https://getbootstrap.com/docs/5.0/components/offcanvas/ -->
-<!-- off canvas = menupopup when clicked. need to have the css, js, and even listeners to use it.  -->
-
-
-
-<!-- <script
-src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"
-></script> -->
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-crossorigin="anonymous"
-></script>
-<script
-src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-crossorigin="anonymous"
-></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
