@@ -31,6 +31,9 @@ Used Twilio to implement SMS communication from the website to the client and re
 
 ## Final Product
 <img width="1429" alt="Register Page" src="https://user-images.githubusercontent.com/55267263/188038783-c252d3ed-5e0a-4efc-a727-19a1a848ee19.png">
+
+# Registration Page
+
 <img width="1429" alt="Home Page 1" src="https://user-images.githubusercontent.com/55267263/188038787-ef93e0ee-98f6-484b-8192-5022865d2ae0.png">
 <img width="1429" alt="Home Page 2" src="https://user-images.githubusercontent.com/55267263/188038799-a372c745-81eb-4556-b9c9-5a23a01dc19a.png">
 <img width="1429" alt="Home Page 3" src="https://user-images.githubusercontent.com/55267263/188038809-b0e0674c-b562-42cf-91c6-c112fc02eefc.png">
