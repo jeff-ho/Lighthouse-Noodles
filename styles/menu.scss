@@ -151,11 +151,11 @@ margin-top: 2em;
 
 #cart-notification{
   position:fixed;
-  bottom: 100px;
-  right: 50px;
+  bottom: 50px;
+  right: 70px;
   display: inline-block;
   font-size: 1em;
-  background: rgb(255, 255, 255);
+  background: rgb(140, 73, 73);
   padding-top: 30px;
   padding-right: 60px;
   padding-bottom: 20px;
@@ -166,7 +166,7 @@ margin-top: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.2s;
-  border-radius: 5px;
+  border-radius: 10px;
   font-family: 'Playfair Display', sans-serif;
-  font-weight: 100;
+  font-weight: 1000;
 }
