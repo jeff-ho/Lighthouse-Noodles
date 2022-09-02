@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
   <link rel="stylesheet" href="/vendor/border-box.css" />
-  <!-- <link rel="stylesheet" href="/styles/nav.css" type="text/css" /> -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/menu.js"></script>
 
@@ -31,16 +31,16 @@
 
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link" href="#apps">Appetizers</a>
+        <a class="nav-link" id="apps-link" href="#apps">Appetizers</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#noods">Noodle Soup</a>
+        <a class="nav-link" id="noodle-link" href="#noods">Noodle Soup</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#snacks">Snacks</a>
+        <a class="nav-link" id="snacks-link" href="#snacks">Snacks</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#drinks">Drinks</a>
+        <a class="nav-link" id="drinks-link" href="#drinks">Drinks</a>
       </li>
 
     </ul>
@@ -54,7 +54,7 @@
     <h4 id="noods" class="text-center">House Special Noodle Soup</h4>
     <div class="d-flex flex-sm-row flex-wrap justify-content-center" id="noodle-container"></div>
   </div>
-  <div class="d-flex flex-column">
+  <div class="d-flex flex-column" >
     <h4 id="snacks" class="text-center">Snacks</h4>
     <div  class="d-flex flex-sm-row flex-wrap justify-content-center" id="snack-container"></div>
   </div>

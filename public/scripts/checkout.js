@@ -68,7 +68,7 @@ const renderCheckout = function () {
         `
         <div id="cart-categories">
 
-        <div class="cart-item">
+        <div class="cart-item-img">
         <img src="${checkout.img}"  width="75" height="75">
         </div>
 
@@ -103,7 +103,7 @@ const renderCheckout = function () {
         </p>
         </div>
 
-        <div class="cart-item">
+        <div class="cart-item-btn">
         <button class="btn btn-danger" type="submit" value="delete" onClick="deleteAndUpdate(${checkout.cart_id})" ><i class="fa-solid fa-trash"></i></button>
         </div>
 

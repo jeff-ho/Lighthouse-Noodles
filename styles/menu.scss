@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
-body{
+body {
   background: #F2F2F2;
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body{
 
 
 
-listExample{
+listExample {
 
   position: relative;
 }
@@ -18,25 +18,26 @@ listExample{
 .item img {
   max-width: 10rem;
   max-height: 10rem;
-  padding-bottom:20px;
+  padding-bottom: 20px;
 }
 
 
 .item {
- width: 270px;
- height: 400px;
- background: #BFBFBF;
- display:flex;
- justify-content:center;
- align-items:center;
- flex-direction: column;
- padding:2em;
- margin-bottom: 20px;
- margin-left: 5px;
- margin-right: 5px;
- color: #10403B;
+  width: 270px;
+  height: 400px;
+  background: #BFBFBF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #10403B;
 
 }
+
 .btn {
   background-color: #4C5958;
   color: azure;
@@ -51,106 +52,94 @@ listExample{
   background-size: cover;
 
 }
+
 #items-container {
   margin: 0 2px;
 
 }
+
 #apps {
-margin-bottom: 4em;
+  margin-bottom: 3em;
+  margin-top: 2em;
+  border-bottom: 3px;
 }
+
 #noods {
-margin-bottom: 4em;
-margin-top: 2em;
+  margin-bottom: 3em;
+  margin-top: 2em;
 }
+
 #snacks {
-margin-bottom: 4em;
-margin-top: 2em;
+  margin-bottom: 3em;
+  margin-top: 2em;
 }
+
 #drinks {
-margin-bottom: 4em;
-margin-top: 2em;
+  margin-bottom: 3em;
+  margin-top: 2em;
 }
 
 .flex-column {
   background: #F2F2F2;
 }
+
 .p-3 {
-  padding: 0!important;
+  padding: 0 !important;
 
 }
 
-#nav-bar {
-  position:fixed;
-  right:0px;
-  left:0px;
-  z-index: 999;
-  background: rgba( 79, 121, 226, 1 );
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur( 5.5px );
-  -webkit-backdrop-filter: blur( 5.5px );
-  height: 80px;
-  }
-  .logo{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin: 0 auto;
-  }
 
-  #logo{
-    width: 70px;
-    height: 70px;
-  }
-@media only screen and (min-width: 320px) and (max-width: 768px) {
-
-    #nav-bar {
-      position:relative;
-      right:0px;
-      left:0px;
-      z-index: 999;
-      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
-      backdrop-filter: blur( 5.5px );
-      -webkit-backdrop-filter: blur( 5.5px );
-      height: 60px;
-      }
-      #navbarNav{
-        background-color: #ffffff;
-        padding-left: 20px;
-        margin-top: 2px;
-      }
-
-      .logo{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        margin: 0 auto;
-      }
-      .logo p {
-        font-size: small;
-      }
-
-      #logo{
-        width: 50px;
-        height: 50px;
-        margin-top: -10px;
-      }
-
-}
-
-.nav-name{
+.nav-name {
   font-family: 'Playfair Display', sans-serif;
+}
+
+#apps-link {
+  color: #10403B;
+}
+
+#apps-link:hover {
+  color: #ffffff;
+  background-color: #4C5958;
+}
+
+#noodle-link {
+  color: #10403B;
+}
+
+#noodle-link:hover {
+  color: #ffffff;
+  background-color: #4C5958;
+}
+
+#snacks-link {
+  color: #10403B;
+}
+
+#snacks-link:hover {
+  color: #ffffff;
+  background-color: #4C5958;
+}
+
+#drinks-link {
+  color: #10403B;
+}
+
+#drinks-link:hover {
+  color: #ffffff;
+  background-color: #4C5958;
 }
 
 #navbar-example2 {
   font-family: 'Playfair Display', sans-serif;
+  height: 80px;
 }
 
-.text-center{
+.text-center {
   font-family: 'Playfair Display', sans-serif;
 }
 
-#cart-notification{
-  position:fixed;
+#cart-notification {
+  position: fixed;
   bottom: 100px;
   right: 50px;
   display: inline-block;

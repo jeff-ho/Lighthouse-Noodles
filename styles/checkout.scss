@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  max-height: 300px;
+  max-height: 340px;
   position: relative;
   width: 100%;
 
@@ -43,21 +43,29 @@ body {
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 0;
+  padding: 5px;
 
 }
 
 .cart-item {
   width: 15%;
+
+}
+
+.cart-item-img {
+  padding-left: 25px;
+}
+
+.cart-item-btn {
+  padding-right: 25px;
 }
 
 
 .cart-item p {
   margin: 0;
   text-align: left;
-  font-size: small;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 #subtotal {
@@ -117,68 +125,7 @@ body {
 
 
 
-#nav-bar {
-  position: fixed;
-  right: 0px;
-  left: 0px;
-  z-index: 999;
-  background: rgba(79, 121, 226, 1);
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(5.5px);
-  -webkit-backdrop-filter: blur(5.5px);
-  height: 80px;
-}
-
-.logo {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin: 0 auto;
-}
-
-#logo {
-  width: 70px;
-  height: 70px;
-}
-
-
-
-
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-
-  #nav-bar {
-    position: relative;
-    right: 0px;
-    left: 0px;
-    z-index: 999;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    height: 60px;
-  }
-
-  #navbarNav {
-    background-color: #ffffff;
-    padding-left: 20px;
-    margin-top: 2px;
-  }
-
-  .logo {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin: 0 auto;
-  }
-
-  .logo p {
-    font-size: small;
-  }
-
-  #logo {
-    width: 50px;
-    height: 50px;
-    margin-top: -10px;
-  }
 
   .checkout-body {
     width: 98%;
@@ -199,6 +146,12 @@ body {
 
   .checkout-title {
     margin-bottom: 20px;
+  }
+  .cart-item p {
+    margin: 0;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 400;
   }
 
 }
