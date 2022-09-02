@@ -44,7 +44,7 @@ Used Twilio to implement SMS communication from the website to the client and re
 
 Jeffrey Lee - https://github.com/jeffreyleec
 Jeffrey Ho - https://github.com/ynot9042
-Mohammed Abbas - 
+Mohammed Abbas - https://github.com/mo-ab93
 
 
 
